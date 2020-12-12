@@ -1,0 +1,7 @@
+jmp cat
+jz cat
+cat: add eax, ebx
+jmp pampam
+kitty: add eax, eax
+jmp kitty
+
