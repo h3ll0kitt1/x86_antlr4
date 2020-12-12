@@ -4,4 +4,5 @@ cat: add eax, ebx
 jmp pampam
 kitty: add eax, eax
 jmp kitty
-
+add eax, dword ptr [eax + 2 * edx]
+add eax, dword ptr [eax + edx * 2]
