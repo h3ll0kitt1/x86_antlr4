@@ -14,55 +14,56 @@
 
 ### Binary instructions (add, mov, sub, or, and, xor, cmp, test):
 
-* cmd <reg8/16/32>,<reg8/16/32>
-* cmd <reg8/16/32>,<mem8/16/32>
-* cmd <mem8/16/32>,<reg8/16/32>
-* cmd <reg8/16/32>,<const8/16/32>
-* cmd <mem8/16/32>,<const8/16/32>
+* cmd `<reg8/16/32>,<reg8/16/32>`
+* cmd `<reg8/16/32>,<mem8/16/32>`
+* cmd `<mem8/16/32>,<reg8/16/32>`
+* cmd `<reg8/16/32>,<const8/16/32>`
+* cmd `<mem8/16/32>,<const8/16/32>`
 
 ### Unary instructions (neg, not, div, inc, dec, mul, pop):
 
-* cmd <reg8/16/32>
-* cmd <mem8/16/32>
+* cmd `<reg8/16/32>`
+* cmd `<mem8/16/32>`
 
 ### Control flow instructions (call, jmp, jne, je, jz):
 
-* cmd label
-* cmd <reg32>/<mem32>/<imm32>
+* cmd `label`
+* cmd `<reg32>/<mem32>/<imm32>`
   
 ### Push instruction:
 
-* push <reg32>/<mem32>/<imm32>
-* push <reg16>/<mem16>
+* push `<reg32>`
+* push `<mem32>`
+* push `<imm32>`
+* push `<reg16>`
+* push `<mem16>`
 
 ### Ret instruction:
 
 * ret
-* ret <imm16>
+* ret `<imm16>`
 
 ### Nop инструкция:
 
-* Nop
+* nop
 
- 
+## Проверка наличия используемых меток
+
+Использует класс LabelVisitor, который добавляет, встречаемые метки в хештаблицу, и проверяет, что при обращении к метке, она уже находится в хештаблице, то есть что это валидная метка указывающая на некоторый адрес. В случае, если метка не указывает никуда, выбрасывается исключение. 
+
+## Результаты, полученные с помощью Google Benchmark
+
+ ![](images/GoogleBenchmarkAntlr4.jpg)
   
+ ![](images/table_mpl.png)
  
-
-
-
-
-
-
-
-
-
-
-
+ 
+## График зависимости времени парсинга от размеров входных файлов
 
 ![](images/antlr_graph.png)
 
 ![](images/antlr_graphdot.png)
 
-![](images/table_mpl.png)
 
-![](images/GoogleBenchmarkAntlr4.jpg)
+
+
