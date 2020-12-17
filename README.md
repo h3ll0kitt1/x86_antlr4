@@ -27,7 +27,27 @@
 
 ### Control flow instructions (call, jmp, jne, je, jz):
 
-*
+* cmd label
+* cmd <reg32>/<mem32>/<imm32>
+  
+### Push instruction:
+
+* push <reg32>/<mem32>/<imm32>
+* push <reg16>/<mem16>
+
+### Ret instruction:
+
+* ret
+* ret <imm16>
+
+### Nop инструкция:
+
+* Nop
+
+ 
+  
+ 
+
 
 
 
