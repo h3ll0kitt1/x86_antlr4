@@ -1,3 +1,4 @@
 GoogleBenchmarkAntlr4.jpg - Screenshot Google Benchmark output
-Table of sizes and real time and CPU time 
-Plot of antlr4 parsing time for different sizes of input files
+table_mpl.png             - Table of sizes, real time and CPU time 
+antlr_graph.png           - Plot of antlr4 parsing time for different sizes of input files
+antlr_graphdot.png        - Scatter plot of antlr4 parsing time for different sizes of input files
