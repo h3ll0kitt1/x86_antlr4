@@ -6,8 +6,7 @@ find_package(antlr4-runtime REQUIRED)
 find_package(antlr4-generator REQUIRED)
 find_package(benchmark REQUIRED)
 
-# change to dir location
-set(ANTLR4_JAR_LOCATION /usr/local/lib/antlr-4.9-complete.jar)
+set(ANTLR4_JAR_LOCATION ${PROJECT_SOURCE_DIR}/thirdparty/antlr4/antlr-4.9-complete.jar)
 
 # generate parser and lexer from one grammar file
 antlr4_generate(
